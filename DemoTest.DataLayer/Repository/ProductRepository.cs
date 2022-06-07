@@ -24,8 +24,27 @@ namespace DemoTest.DataLayer.Repository
         }
 
 
+
+
         #endregion
-        public PagedList<ProductViewModel> GetAllProducts(ProductParameters productParameters)
+        public PagedList<ProductViewModel> GetAll(ProductList productList)
+        {
+            var products = _demoDbContext.Products.AsQueryable();
+            return PagedList<ProductViewModel>.ToPagedList(products
+                .OrderBy(p => p.Tilte)
+                .Select(pro => new ProductViewModel
+                {
+                    Id = pro.Id,
+                    Color = pro.Color.ToString(),
+                    Price = pro.Price,
+                    Tilte = pro.Tilte,
+                    Type = pro.Type.ToString()
+                })
+                .AsQueryable(),
+                productList.PageNumber,
+                productList.PageSize);
+        }
+        public PagedList<ProductViewModel> SearchProducts(ProductParameters productParameters)
         {
             var products = _demoDbContext.Products.AsQueryable();
             //.Select(pro => new ProductDto

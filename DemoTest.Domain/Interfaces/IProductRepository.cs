@@ -9,7 +9,9 @@ namespace DemoTest.Domain.Interfaces
 {
     public interface IProductRepository
     {
-        PagedList<ProductViewModel> GetAllProducts(ProductParameters productParameters);
-        
+        PagedList<ProductViewModel> SearchProducts(ProductParameters productParameters);
+        PagedList<ProductViewModel> GetAll(ProductList productList);
+
+
     }
 }

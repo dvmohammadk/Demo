@@ -3,16 +3,10 @@ using DemoTest.Domain.Dto;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-//using System.Web.Http;
-using HttpGetAttribute = System.Web.Http.HttpGetAttribute;
-using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 
 namespace TestDemo.WebApi.Controllers
 {
-    //[ApiController]
-    //[System.Web.Http.Route("[controller]")]
-    //[Authorize]
-    [Route("[controller]")]
+    [Route("api/products")]
     [ApiController]
     [Authorize]
     public class ProductController : ControllerBase
@@ -24,12 +18,46 @@ namespace TestDemo.WebApi.Controllers
             _productService = productService;
         }
         #endregion
-        
+
+
+        //public IActionResult Get([FromQuery] ProductParameters productParameters)
+        //{
+        //    var products = _productService.GetAllProducts(productParameters);
+        //    var metadata = new
+        //    {
+        //        products.TotalCount,
+        //        products.PageSize,
+        //        products.CurrentPage,
+        //        products.TotalPages,
+        //        products.HasNext,
+        //        products.HasPrevious
+        //    };
+
+        //    Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(metadata));
+        //    return Ok(products);
+        //}
         [HttpGet]
-        //[System.Web.Http.Route("product")]
-        public IActionResult Get ([FromQuery] ProductParameters productParameters)
+        public IActionResult Get([FromQuery] ProductList productList)
         {
-            var products = _productService.GetAllProducts(productParameters);
+            var products = _productService.GetAll(productList);
+            var metadata = new
+            {
+                products.TotalCount,
+                products.PageSize,
+                products.CurrentPage,
+                products.TotalPages,
+                products.HasNext,
+                products.HasPrevious
+            };
+
+            Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(metadata));
+            return Ok(products);
+        }
+        [HttpGet]
+        [Route("search")]
+        public IActionResult Search([FromQuery] ProductParameters productParameters)
+        {
+            var products = _productService.SearchProducts(productParameters);
             var metadata = new
             {
                 products.TotalCount,

@@ -21,9 +21,13 @@ namespace DemoTest.Applicatin.Services.Implementations
 
         #endregion
         #region Products
-        public PagedList<ProductViewModel> GetAllProducts(ProductParameters productParameters)
+        public PagedList<ProductViewModel> SearchProducts(ProductParameters productParameters)
         {
-            return  _productRepository.GetAllProducts( productParameters);
+            return  _productRepository.SearchProducts( productParameters);
+        }
+        public PagedList<ProductViewModel> GetAll(ProductList productList)
+        {
+            return _productRepository.GetAll(productList);
         }
         #endregion
     }

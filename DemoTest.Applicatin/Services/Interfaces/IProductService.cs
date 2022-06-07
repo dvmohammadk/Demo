@@ -12,7 +12,10 @@ namespace DemoTest.Applicatin.Services.Interfaces
     public interface IProductService
     {
         #region Products
-        PagedList<ProductViewModel> GetAllProducts(ProductParameters productParameters);
+        PagedList<ProductViewModel> SearchProducts(ProductParameters productParameters);
+        PagedList<ProductViewModel> GetAll(ProductList productList);
+
+
         #endregion
     }
 

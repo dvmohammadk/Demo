@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,8 +47,32 @@ namespace TestDemo.WebApi
                 options.UseSqlServer(Configuration.GetConnectionString("DemoConnection"));
             });
             #endregion
-            
-            
+            services.AddSwaggerGen(a =>
+            {
+                a.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "test", Version = "version 1" });
+                a.AddSecurityDefinition("basic", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "basic",
+                    In = ParameterLocation.Header,
+                    Description = "Basic Authorization header using the Bearer scheme."
+                });
+                a.AddSecurityRequirement(new OpenApiSecurityRequirement
+            {
+                {
+                      new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "basic"
+                            }
+                        },
+                        new string[] {} } });
+            });
+
+
 
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -61,7 +86,12 @@ namespace TestDemo.WebApi
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-            
+            app.UseSwagger();
+            app.UseSwaggerUI(a =>
+            {
+                a.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+
+            });
 
             app.UseEndpoints(endpoints =>
             {
