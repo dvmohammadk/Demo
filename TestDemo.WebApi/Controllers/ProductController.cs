@@ -18,24 +18,7 @@ namespace TestDemo.WebApi.Controllers
             _productService = productService;
         }
         #endregion
-
-
-        //public IActionResult Get([FromQuery] ProductParameters productParameters)
-        //{
-        //    var products = _productService.GetAllProducts(productParameters);
-        //    var metadata = new
-        //    {
-        //        products.TotalCount,
-        //        products.PageSize,
-        //        products.CurrentPage,
-        //        products.TotalPages,
-        //        products.HasNext,
-        //        products.HasPrevious
-        //    };
-
-        //    Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(metadata));
-        //    return Ok(products);
-        //}
+        
         [HttpGet]
         public IActionResult Get([FromQuery] ProductList productList)
         {
