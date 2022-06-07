@@ -1,0 +1,15 @@
+D:\Tebyan\One\TestDemo\DemoTest.Applicatin\bin\Debug\net5.0\DemoTest.Applicatin.deps.json
+D:\Tebyan\One\TestDemo\DemoTest.Applicatin\bin\Debug\net5.0\DemoTest.Applicatin.dll
+D:\Tebyan\One\TestDemo\DemoTest.Applicatin\bin\Debug\net5.0\ref\DemoTest.Applicatin.dll
+D:\Tebyan\One\TestDemo\DemoTest.Applicatin\bin\Debug\net5.0\DemoTest.Applicatin.pdb
+D:\Tebyan\One\TestDemo\DemoTest.Applicatin\obj\Debug\net5.0\DemoTest.Applicatin.csproj.AssemblyReference.cache
+D:\Tebyan\One\TestDemo\DemoTest.Applicatin\obj\Debug\net5.0\DemoTest.Applicatin.GeneratedMSBuildEditorConfig.editorconfig
+D:\Tebyan\One\TestDemo\DemoTest.Applicatin\obj\Debug\net5.0\DemoTest.Applicatin.AssemblyInfoInputs.cache
+D:\Tebyan\One\TestDemo\DemoTest.Applicatin\obj\Debug\net5.0\DemoTest.Applicatin.AssemblyInfo.cs
+D:\Tebyan\One\TestDemo\DemoTest.Applicatin\obj\Debug\net5.0\DemoTest.Applicatin.csproj.CoreCompileInputs.cache
+D:\Tebyan\One\TestDemo\DemoTest.Applicatin\obj\Debug\net5.0\DemoTest.Applicatin.dll
+D:\Tebyan\One\TestDemo\DemoTest.Applicatin\obj\Debug\net5.0\ref\DemoTest.Applicatin.dll
+D:\Tebyan\One\TestDemo\DemoTest.Applicatin\obj\Debug\net5.0\DemoTest.Applicatin.pdb
+D:\Tebyan\One\TestDemo\DemoTest.Applicatin\bin\Debug\net5.0\DemoTest.Domain.dll
+D:\Tebyan\One\TestDemo\DemoTest.Applicatin\bin\Debug\net5.0\DemoTest.Domain.pdb
+D:\Tebyan\One\TestDemo\DemoTest.Applicatin\obj\Debug\net5.0\DemoTest.Applicatin.csproj.CopyComplete

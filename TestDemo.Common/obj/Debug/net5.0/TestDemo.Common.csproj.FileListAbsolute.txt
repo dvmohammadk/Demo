@@ -1,0 +1,12 @@
+D:\Tebyan\One\TestDemo\TestDemo.Common\bin\Debug\net5.0\TestDemo.Common.deps.json
+D:\Tebyan\One\TestDemo\TestDemo.Common\bin\Debug\net5.0\TestDemo.Common.dll
+D:\Tebyan\One\TestDemo\TestDemo.Common\bin\Debug\net5.0\ref\TestDemo.Common.dll
+D:\Tebyan\One\TestDemo\TestDemo.Common\bin\Debug\net5.0\TestDemo.Common.pdb
+D:\Tebyan\One\TestDemo\TestDemo.Common\obj\Debug\net5.0\TestDemo.Common.csproj.AssemblyReference.cache
+D:\Tebyan\One\TestDemo\TestDemo.Common\obj\Debug\net5.0\TestDemo.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\Tebyan\One\TestDemo\TestDemo.Common\obj\Debug\net5.0\TestDemo.Common.AssemblyInfoInputs.cache
+D:\Tebyan\One\TestDemo\TestDemo.Common\obj\Debug\net5.0\TestDemo.Common.AssemblyInfo.cs
+D:\Tebyan\One\TestDemo\TestDemo.Common\obj\Debug\net5.0\TestDemo.Common.csproj.CoreCompileInputs.cache
+D:\Tebyan\One\TestDemo\TestDemo.Common\obj\Debug\net5.0\TestDemo.Common.dll
+D:\Tebyan\One\TestDemo\TestDemo.Common\obj\Debug\net5.0\ref\TestDemo.Common.dll
+D:\Tebyan\One\TestDemo\TestDemo.Common\obj\Debug\net5.0\TestDemo.Common.pdb

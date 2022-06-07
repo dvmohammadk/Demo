@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "DemoTest.Applicatin/1.0.0": {
+        "dependencies": {
+          "DemoTest.Domain": "1.0.0"
+        },
+        "runtime": {
+          "DemoTest.Applicatin.dll": {}
+        }
+      },
+      "DemoTest.Domain/1.0.0": {
+        "runtime": {
+          "DemoTest.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DemoTest.Applicatin/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DemoTest.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
