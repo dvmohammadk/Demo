@@ -12,8 +12,9 @@ namespace TestDemo.WebApi.Controllers
     //[ApiController]
     //[System.Web.Http.Route("[controller]")]
     //[Authorize]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
+    [Authorize]
     public class ProductController : ControllerBase
     {
         #region Ctor
@@ -25,7 +26,6 @@ namespace TestDemo.WebApi.Controllers
         #endregion
         
         [HttpGet]
-        [Authorize]
         //[System.Web.Http.Route("product")]
         public IActionResult Get ([FromQuery] ProductParameters productParameters)
         {
